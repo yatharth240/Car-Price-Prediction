@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container mx-auto my-5" style="width: 700px;">
+
+    <h3 class="fw-bold my-3">Enter Details of your vehicle: </h3>
+<form action="/results" method="post">
+    <div class="mb-3">
+      <label for="brand" class="form-label">Select Brand Name</label>
+      <select class="form-select" id="brand" name="brand" >
+        <option value="Maruti">Maruti</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Renault">Renault</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Mercedes-benz">Mercedes-benz</option>
+        <option value="Bmw">Bmw</option>
+        <option value="Audi">Audi</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Tata">Tata</option>
+        <option value="Datsun">Datsun</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="year" class="form-label">Year of the Car Model</label>
+      <input type="year" class="form-control" id="year" name="year">
+    </div>
+
+    <div class="mb-3">
+        <label for="kms" class="form-label">Kms Driven</label>
+        <input type="number" class="form-control" id="kms" name="kms">
+      </div>
+
+      <div class="mb-3">
+        <label for="views" class="form-label">Number of Views on the desired website</label>
+        <input type="number" class="form-control" id="views" name="views">
+      </div>
+
+      <div class="mb-3">
+        <label for="photos" class="form-label">Number of photos uploaded on desired website</label>
+        <input type="number" class="form-control" id="photos" name="photos">
+      </div>
+
+      <div class="row">
+          <div class="col">
+            <label for="variant" class="form-label">Variant</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="variant" id="Petrol" value="Petrol">
+                <label class="form-check-label" for="Petrol" name="Petrol">
+                  Petrol
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="variant" id="Diesel" value="Diesel">
+                <label class="form-check-label" for="Diesel" name="Diesel">
+                  Diesel
+                </label>
+              </div>
+          </div>
+
+          <div class="col">
+            <label for="exampleInputPassword1" class="form-label">Transmission Type</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Transmission" id="Manual" value="Manual" >
+                <label class="form-check-label" for="Manual" name="Manual">
+                  Manual
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="Transmission" id="Automatic" value="Automatic">
+                <label class="form-check-label" for="Automatic" name="Automatic">
+                  Automatic
+                </label>
+              </div>
+          </div>
+      
+      
+      </div>
+      
+    <button type="submit" class="btn btn-primary my-2">Submit</button>
+  </form>
+</div>
+
+
+{% endblock body %}
